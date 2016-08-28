@@ -1,0 +1,30 @@
+2016/08/09 13:44:01 [error] [php] preg_grep(): Delimiter must not be alphanumeric or backslash (C:\inetpub\wwwroot\Yii1.1Projects\webServices\accountService\protected\controllers\accountController.php:16)
+Stack trace:
+#0 C:\inetpub\wwwroot\Yii1.1\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\inetpub\wwwroot\Yii1.1\web\CController.php(286): AccountController->runAction()
+#2 C:\inetpub\wwwroot\Yii1.1\web\CController.php(265): AccountController->runActionWithFilters()
+#3 C:\inetpub\wwwroot\Yii1.1\web\CWebApplication.php(282): AccountController->run()
+#4 C:\inetpub\wwwroot\Yii1.1\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\inetpub\wwwroot\Yii1.1\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\inetpub\wwwroot\Yii1.1Projects\webServices\accountService\index.php(19): CWebApplication->run()
+REQUEST_URI=/Yii1.1Projects/webServices/accountService/index.php/account/test
+2016/08/09 13:44:56 [error] [php] preg_grep(): Delimiter must not be alphanumeric or backslash (C:\inetpub\wwwroot\Yii1.1Projects\webServices\accountService\protected\controllers\accountController.php:16)
+Stack trace:
+#0 C:\inetpub\wwwroot\Yii1.1\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\inetpub\wwwroot\Yii1.1\web\CController.php(286): AccountController->runAction()
+#2 C:\inetpub\wwwroot\Yii1.1\web\CController.php(265): AccountController->runActionWithFilters()
+#3 C:\inetpub\wwwroot\Yii1.1\web\CWebApplication.php(282): AccountController->run()
+#4 C:\inetpub\wwwroot\Yii1.1\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\inetpub\wwwroot\Yii1.1\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\inetpub\wwwroot\Yii1.1Projects\webServices\accountService\index.php(19): CWebApplication->run()
+REQUEST_URI=/Yii1.1Projects/webServices/accountService/index.php/account/test
+2016/08/09 13:44:58 [error] [php] preg_grep(): Delimiter must not be alphanumeric or backslash (C:\inetpub\wwwroot\Yii1.1Projects\webServices\accountService\protected\controllers\accountController.php:16)
+Stack trace:
+#0 C:\inetpub\wwwroot\Yii1.1\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\inetpub\wwwroot\Yii1.1\web\CController.php(286): AccountController->runAction()
+#2 C:\inetpub\wwwroot\Yii1.1\web\CController.php(265): AccountController->runActionWithFilters()
+#3 C:\inetpub\wwwroot\Yii1.1\web\CWebApplication.php(282): AccountController->run()
+#4 C:\inetpub\wwwroot\Yii1.1\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\inetpub\wwwroot\Yii1.1\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\inetpub\wwwroot\Yii1.1Projects\webServices\accountService\index.php(19): CWebApplication->run()
+REQUEST_URI=/Yii1.1Projects/webServices/accountService/index.php/account/test

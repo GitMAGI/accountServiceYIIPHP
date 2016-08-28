@@ -1,0 +1,14 @@
+The basic Idea is:
+
+- Divide the process (the service process) into 3 layers:
+    1. API - mothods remote application can call
+    2. BBL - Business logic layer, where processing is done
+    3. DAL - Data access layer - the methods through you can access the data 
+
+In order to provide a scalability pattern of the process (the service process), 
+I've defined an interface for the API layer and anotherone for the DAL. 
+In this way the remote application will call the API methodsas it ever used to 
+do. Further has been made a DAL interface, that allows the developer to manage 
+different ways to access the data (in this development the data are all stored 
+in a DB). Indeed, providing the same methods (defined within the DAL interface),
+ the BLL can access the data beside which is the data management system in use.

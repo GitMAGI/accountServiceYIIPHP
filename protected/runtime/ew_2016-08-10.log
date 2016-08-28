@@ -1,0 +1,2 @@
+2016/08/10 01:51:32 [error] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Error! No Account corresponding to lpaglionico2 found!
+2016/08/10 01:52:55 [error] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] The password for lpaglionico is wrong! Access denied!

@@ -1,0 +1,56 @@
+2016/08/10 01:51:31 [info] [components.Result.Result()] Result Construction. Setting the array of attributes to hide ...
+2016/08/10 01:51:31 [info] [components.Result.Result()] Result object successfully constructed!
+2016/08/10 01:51:31 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Response object built!
+2016/08/10 01:51:31 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage through attributes: UserName=>lpaglionico2
+2016/08/10 01:51:32 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Operation Completed in 00:00:00.487 (hh:mm:ss.ms)
+2016/08/10 01:52:55 [info] [components.Result.Result()] Result Construction. Setting the array of attributes to hide ...
+2016/08/10 01:52:55 [info] [components.Result.Result()] Result object successfully constructed!
+2016/08/10 01:52:55 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Response object built!
+2016/08/10 01:52:55 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage through attributes: UserName=>lpaglionico
+2016/08/10 01:52:55 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 1 Items Found!
+2016/08/10 01:52:55 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Operation Completed in 00:00:00.106 (hh:mm:ss.ms)
+2016/08/10 01:54:45 [info] [components.Result.Result()] Result Construction. Setting the array of attributes to hide ...
+2016/08/10 01:54:45 [info] [components.Result.Result()] Result object successfully constructed!
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Response object built!
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage through attributes: UserName=>lpaglionico
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 1 Items Found!
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Credentials valid for lpaglionico!
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] DB Row for lpaglionico successfully updated!
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage getting data after upadatings, through attributes: UserName=>lpaglionico
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 2 Items Found!
+2016/08/10 01:54:45 [info] [components.Result.addData()] Adding 1 items ...
+2016/08/10 01:54:45 [info] [components.Result.addData()] Cloning and attributes hiding for item 1 ...
+2016/08/10 01:54:45 [info] [components.Result.addData()] Cloning and attributes hiding done!
+2016/08/10 01:54:45 [info] [components.Result.addData()] Purged item successfully added to results!
+2016/08/10 01:54:45 [info] [components.Result.addData()] Added 1 items successfully!
+2016/08/10 01:54:45 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Operation Completed in 00:00:00.256 (hh:mm:ss.ms)
+2016/08/10 02:08:05 [info] [components.Result.Result()] Result Construction. Setting the array of attributes to hide ...
+2016/08/10 02:08:05 [info] [components.Result.Result()] Result object successfully constructed!
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Response object built!
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage through attributes: UserName=>lpaglionico
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 1 Items Found!
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Credentials valid for lpaglionico!
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] DB Row for lpaglionico successfully updated!
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage getting data after upadatings, through attributes: UserName=>lpaglionico
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 2 Items Found!
+2016/08/10 02:08:05 [info] [components.Result.addData()] Adding 1 items ...
+2016/08/10 02:08:05 [info] [components.Result.addData()] Cloning and attributes hiding for item 1 ...
+2016/08/10 02:08:05 [info] [components.Result.addData()] Cloning and attributes hiding done!
+2016/08/10 02:08:05 [info] [components.Result.addData()] Purged item successfully added to results!
+2016/08/10 02:08:05 [info] [components.Result.addData()] Added 1 items successfully!
+2016/08/10 02:08:05 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Operation Completed in 00:00:00.124 (hh:mm:ss.ms)
+2016/08/10 16:34:36 [info] [components.Result.Result()] Result Construction. Setting the array of attributes to hide ...
+2016/08/10 16:34:36 [info] [components.Result.Result()] Result object successfully constructed!
+2016/08/10 16:34:36 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Response object built!
+2016/08/10 16:34:36 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage through attributes: UserName=>lpaglionico
+2016/08/10 16:34:38 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 1 Items Found!
+2016/08/10 16:34:38 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Credentials valid for lpaglionico!
+2016/08/10 16:34:38 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] DB Row for lpaglionico successfully updated!
+2016/08/10 16:34:38 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Quering the storage getting data after upadatings, through attributes: UserName=>lpaglionico
+2016/08/10 16:34:38 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] 2 Items Found!
+2016/08/10 16:34:38 [info] [components.Result.addData()] Adding 1 items ...
+2016/08/10 16:34:38 [info] [components.Result.addData()] Cloning and attributes hiding for item 1 ...
+2016/08/10 16:34:38 [info] [components.Result.addData()] Cloning and attributes hiding done!
+2016/08/10 16:34:38 [info] [components.Result.addData()] Purged item successfully added to results!
+2016/08/10 16:34:38 [info] [components.Result.addData()] Added 1 items successfully!
+2016/08/10 16:34:38 [info] [components.BLL.AccountServiceBLL.setAccountDetailsByUserNameBLL()] Operation Completed in 00:00:01.589 (hh:mm:ss.ms)
