@@ -47,7 +47,9 @@ class AccountController extends Controller implements IAccountService
      * @soap
      */
     public static function getAccountDetailsByID($id) {
-        return AccountServiceBLL::getAccountDetailsByIDBLL($id);
+        $dal = new AccountDAL();
+        $bll = new AccountServiceBLL($dal);
+        return $bll->getAccountDetailsByIDBLL($id);
     }
     
     /**
