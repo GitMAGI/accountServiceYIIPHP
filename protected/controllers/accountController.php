@@ -6,25 +6,28 @@ class AccountController extends Controller implements IAccountService
         //$id = 3;           
         //$resultAccount = self::getAccountDetailsByID($id);
         
-        //$username = "admin2";           
-        //$resultAccount = self::getAccountDetailsByUserName($username);
+        $username = "admin";           
+        $resultAccount1 = self::getAccountDetailsByUserName($username);
+        
         
         //$cond = array('condition'=>"idAccount >= :id", 'params'=>array(":id"=>1));   
         //$resultAccount = self::getMatchesByConditions($cond);
         
-        //$username = "lpaglionico";
-        //$password = "semABC123";
+        $username = "test";
+        $password = "test";
         
         //$d = array('EmailRecovery'=>'ciccio.pasticcio@gmail.com', 'LastLoginIP'=>'192.168.1.1');
         
         //$resultAccount = self::setAccountDetailsByUserName($username, $password, $d);
         
-        //$resultAccount = self::isUserLoggable($username, $password);
+        $resultAccount2 = self::login($username, $password);
         
         echo "<pre>";
-        //print_r($resultAccount);
+        print_r($resultAccount1);
         echo "\n\n";
-        //echo password_hash($password, PASSWORD_DEFAULT);
+        print_r($resultAccount2);
+        echo "\n\n";
+        echo password_hash($password, PASSWORD_DEFAULT);
         //print_r($_SERVER);
         echo "</pre>";
     }
@@ -58,7 +61,9 @@ class AccountController extends Controller implements IAccountService
      * @soap
      */
     public static function getAccountDetailsByUserName($username) {
-        return  AccountServiceBLL::getAccountDetailsByUserNameBLL($username);
+        $dal = new AccountDAL();
+        $bll = new AccountServiceBLL($dal);
+        return  $bll->getAccountDetailsBLL($username);
     }
 
     
@@ -70,7 +75,9 @@ class AccountController extends Controller implements IAccountService
      * @soap
      */
     public static function setAccountDetailsByUserName($username, $password, $data) {
-        return AccountServiceBLL::setAccountDetailsByUserNameBLL($username, $password, $data);
+        $dal = new AccountDAL();
+        $bll = new AccountServiceBLL($dal);
+        return $bll->setAccountDetailsByUserNameBLL($username, $password, $data);
     }
     
     /**
@@ -79,14 +86,18 @@ class AccountController extends Controller implements IAccountService
      * @return Result
      * @soap
      */
-    public static function isUserLoggable($username, $password) {
-        return AccountServiceBLL::isUserLoggableBLL($username, $password);
+    public static function login($username, $password) {
+        $dal = new AccountDAL();
+        $bll = new AccountServiceBLL($dal);
+        return $bll->loginBLL($username, $password);
     }
 
     
     
     public static function getMatchesByConditions($conditions) {
-        return AccountServiceBLL::getMatchesByConditionBLL($conditions);
+        $dal = new AccountDAL();
+        $bll = new AccountServiceBLL($dal);
+        return $bll->getMatchesByConditionBLL($conditions);
     }
 
 }

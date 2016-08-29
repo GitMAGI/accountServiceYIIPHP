@@ -48,7 +48,7 @@ class Result {
         $msg = "Result object successfully constructed!";
         Yii::log($msg, $level, $category);       
     }
-    
+    /*
     public function addData($dataList){
         $level = "info";
         $category = self::$classNS.".addData()";
@@ -85,6 +85,7 @@ class Result {
             Yii::log("Exception Occurred:\n".$e->getMessage(), "error", $category);
         }
     }
+    */
     
     public function addData($dataList, $atts2Hide){
         $level = "info";
@@ -127,6 +128,7 @@ class Result {
             Yii::log("Exception Occurred:\n".$e->getMessage(), "error", $category);
         }
     }
+     
     public function clearData(){
         $this->data = array();
     }

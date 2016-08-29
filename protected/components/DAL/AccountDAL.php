@@ -16,7 +16,7 @@ class AccountDAL implements IAccountServiceDAL{
     
     //Get Primary key array($k=>$v)
     //$model->tableSchema->primaryKey;
-    public static function getPKByRecord($record){
+    public function getPKByRecord($record){
         $category = self::$classNS.".getPKByRecord()";
         $pk = Account::model()->tableSchema->primaryKey;
         $pkData = array();
@@ -31,14 +31,14 @@ class AccountDAL implements IAccountServiceDAL{
         }
     }
     
-    public static function getByConditions($conditions) {
+    public function getByConditions($conditions) {
         return Account::model()->findAll($conditions); 
     }
-    public static function getByAttributes($attributes) {
+    public function getByAttributes($attributes) {
         return Account::model()->findAllByAttributes($attributes); 
     }
 
-    public static function insertByPK($data) {
+    public function insertByPK($data) {
         $category = self::$classNS.".updateByPK()";
         
         $model = new Account();
@@ -54,7 +54,7 @@ class AccountDAL implements IAccountServiceDAL{
         return $model->save();
     }
 
-    public static function updateByPK($pk, $data) {
+    public function updateByPK($pk, $data) {
         $category = self::$classNS.".updateByPK()";
         
         $model = Account::model()->findByPk($pk);

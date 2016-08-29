@@ -11,8 +11,8 @@
  * @author Genzo Hikari
  */
 interface IAccountServiceDAL {
-    public static function updateByPK($pk, $data);
-    public static function insertByPK($data);
-    public static function getByConditions($conditions);
-    public static function getByAttributes($attributes);    
+    public function updateByPK($pk, $data);
+    public function insertByPK($data);
+    public function getByConditions($conditions);
+    public function getByAttributes($attributes);    
 }

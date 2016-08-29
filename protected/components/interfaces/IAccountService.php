@@ -15,7 +15,7 @@ interface IAccountService {
     public static function getAccountDetailsByUserName($username);
     
     public static function setAccountDetailsByUserName($username, $password, $data);
-    public static function isUserLoggable($username, $password);
+    public static function login($username, $password);
     
     public static function getMatchesByConditions($conditions);
 }
