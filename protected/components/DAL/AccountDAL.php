@@ -17,18 +17,26 @@ class AccountDAL implements IAccountServiceDAL{
     //Get Primary key array($k=>$v)
     //$model->tableSchema->primaryKey;
     public function getPKByRecord($record){
+        $level ="info";
         $category = self::$classNS.".getPKByRecord()";
         $pk = Account::model()->tableSchema->primaryKey;
+        if(!is_array($pk) && count($pk)==1){
+            $tmp = array();
+            array_push($tmp, $pk);
+            $pk = $tmp;
+        }
+        //Yii::log(print_r($pk, true), $level, $category);
         $pkData = array();
         foreach($pk as $p){
             if(isset($record[$p])){
                 $pkData[$p] = $record[$p];
             }
             else{
-                $msg = "Error occurred in ".$category."! Bad data PK retrievingL. No $p found in the data record!";
+                $msg = "Error occurred in ".$category."! Bad data PK retrieving. No $p found in the data record!";
                 throw new Exception($msg);
             }
         }
+        return $pkData;
     }
     
     public function getByConditions($conditions) {
@@ -55,8 +63,10 @@ class AccountDAL implements IAccountServiceDAL{
     }
 
     public function updateByPK($pk, $data) {
+        $level ="info";
         $category = self::$classNS.".updateByPK()";
-        
+        //Yii::log(print_r($pk, true), $level, $category);
+        //Yii::log(print_r($data, true), $level, $category);
         $model = Account::model()->findByPk($pk);
         foreach($data as $k=>$v){            
             if($model->hasAttribute($k)){

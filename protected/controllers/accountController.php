@@ -6,8 +6,8 @@ class AccountController extends Controller implements IAccountService
         //$id = 3;           
         //$resultAccount = self::getAccountDetailsByID($id);
         
-        $username = "admin";           
-        $resultAccount1 = self::getAccountDetailsByUserName($username);
+        //$username = "admin";           
+        //$resultAccount1 = self::getAccountDetailsByUserName($username);
         
         
         //$cond = array('condition'=>"idAccount >= :id", 'params'=>array(":id"=>1));   
@@ -21,10 +21,11 @@ class AccountController extends Controller implements IAccountService
         //$resultAccount = self::setAccountDetailsByUserName($username, $password, $d);
         
         $resultAccount2 = self::login($username, $password);
+        //$resultAccount2 = self::setUserPasswordByUserName($username, $password, "test2");
         
         echo "<pre>";
-        print_r($resultAccount1);
-        echo "\n\n";
+        //print_r($resultAccount1);
+        //echo "\n\n";
         print_r($resultAccount2);
         echo "\n\n";
         echo password_hash($password, PASSWORD_DEFAULT);
@@ -92,6 +93,11 @@ class AccountController extends Controller implements IAccountService
         return $bll->loginBLL($username, $password);
     }
 
+    public static function setUserPasswordByUserName($username, $oldPwd, $newPwd){
+        $dal = new AccountDAL();
+        $bll = new AccountServiceBLL($dal);
+        return $bll->setUserPasswordBLL($username, $oldPwd, $newPwd);
+    }
     
     
     public static function getMatchesByConditions($conditions) {

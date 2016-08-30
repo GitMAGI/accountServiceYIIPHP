@@ -71,9 +71,15 @@ class AccountServiceBLL {
         return $response;
     }
     public function setUserPasswordBLL($username, $pwdOld, $pwdNew){
-        $result = $this->isUserLoggable($username, $pwdOld);
+        $result = $this->loginBLL($username, $pwdOld);
+        
+        $level = "info";
+        $category = self::$classNS.".setUserPasswordBLL()";   
+        //Yii::log(print_r($result->data[0], true), $level, $category);
+        
         if($result->success){
             $pk = $this->dal->getPKByRecord($result->data[0]);
+            //Yii::log(print_r($pk, true), $level, $category);
             $r = $this->read($username);
             if($r->success){
                 $data = $r->data[0];
@@ -148,11 +154,13 @@ class AccountServiceBLL {
 
                 return $response;
             }
-            if($this->checkPassword($password, $data[0]['DigestPwd'])){
+            if(!$this->checkPassword($password, $data[0]['DigestPwd'])){
                 $t_dur = microtime(true) - $start;
                 $t_dur_str = Lib::microtimeToHISmS($t_dur);
 
                 $response->addMessage("Operation time: ".$t_dur_str);
+                $response->addError("Password doesn't match!");
+                $response->success = false;
 
                 Yii::log("Operation Completed in ".$t_dur_str, $level, $category);
 
@@ -245,7 +253,8 @@ class AccountServiceBLL {
         
         try{
             // Filter data to write
-            $tmp = data2WriteFilter($data, self::$attributesToLock);
+            Yii::log(print_r($data, true), $level, $category);
+            $tmp = $this->data2WriteFilter($data, self::$attributesToLock);
             $response->addWarning($tmp['warning']);
             $data_ = $tmp['data'];
             
@@ -295,7 +304,7 @@ class AccountServiceBLL {
         
         try{
             // Filter data to write
-            $tmp = data2WriteFilter($data, self::$attributesToLock);
+            $tmp = $this->data2WriteFilter($data, self::$attributesToLock);
             $response->addWarning($tmp['warning']);
             $data_ = $tmp['data'];
             
@@ -400,7 +409,7 @@ class AccountServiceBLL {
                 Yii::log("Response object built!", $level, $category);
             }
 
-            Yii::log(print_r($data, true), $level, $category);
+            //Yii::log(print_r($data, true), $level, $category);
             
             //Check $data
             if(isset($data) && isset($data['UAC'])){
@@ -494,7 +503,7 @@ class AccountServiceBLL {
                         Yii::log($msg, $level, $category);
                         break;
                     case 200:
-                        $msg = "Account active!";
+                        $msg = "Password active!";
                         $Result->success = true;
                         $Result->addMessage($msg);
                         Yii::log($msg, $level, $category);
@@ -544,14 +553,14 @@ class AccountServiceBLL {
         $warnings = array();
         
         $data_ = array();
-        if(isset($data) && is_array($data)){
+        if(isset($data)){
             foreach ($data as $key => $value) {
                 if(!in_array($key, $atts2Lock)){
                     $data_[$key] = $value;
                 }
                 else{
                     $msg = "The attribute $key is not writeable. This request will be ignored!";
-                    array_push($msg, $warnings);
+                    array_push($warnings, $msg);
                 }
             } 
             $msg = "Filtered ".count($data_)." attributes.";
